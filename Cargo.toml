@@ -1,0 +1,17 @@
+[package]
+edition = "2021"
+name = "streams-custom-transports"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "*"
+async-trait = "*"
+iota-streams = {git = "https://github.com/arnauorriols/streams", branch = "feat/transport-simplification", default-features = false, features = ["std", "tangle"]}
+reqwest = {version = "*", features = ["json"]}
+tokio = {version = "*", features = ["macros", "rt-multi-thread"]}
+serde = {version = "*", features = ["derive"] }
+base64 = "*"
+serde_json = "*"
+futures = "*"
